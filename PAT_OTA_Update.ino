@@ -13,7 +13,7 @@ WebServer server(80);
 #define LED 2
 
 
-
+//______________________________________________________________________________________________________________________________
 /* Style */
 String style =
 "<style>#file-input,input{width:100%;height:44px;border-radius:4px;margin:10px auto;font-size:15px}"
@@ -22,6 +22,7 @@ String style =
 "#bar,#prgbar{background-color:#f1f1f1;border-radius:10px}#bar{background-color:#3498db;width:0%;height:10px}"
 "form{background:#fff;max-width:258px;margin:75px auto;padding:30px;border-radius:5px;text-align:center}"
 ".btn{background:#3498db;color:#fff;cursor:pointer}</style>";
+//______________________________________________________________________________________________________________________________
 /* Login page */
 String loginIndex = 
 "<form name=loginForm>"
@@ -38,7 +39,7 @@ String loginIndex =
 "{alert('Error Password or Username')}"
 "}"
 "</script>" + style;
- 
+ //______________________________________________________________________________________________________________________________
 /* Server Index Page */
 String serverIndex = 
 "<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>"
@@ -147,7 +148,7 @@ void setup(void) {
   });
   server.begin();
 }
-
+//______________________________________________________________________________________________________________________________
 void loop(void) {
   for(int i=0; i<200;i++){
   server.handleClient();
@@ -161,3 +162,4 @@ void loop(void) {
   }
   digitalWrite(LED,LOW);
 }
+//______________________________________________________________________________________________________________________________
